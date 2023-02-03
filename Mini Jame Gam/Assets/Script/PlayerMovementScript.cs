@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-
+    public int Energy;
     private GameObject[] Obstacle;
     private GameObject[] Movable;
     private GameObject[] MovableWithKey;
@@ -37,6 +37,11 @@ public class PlayerMovementScript : MonoBehaviour
         {
             ReadyToMove = true;
         }
+
+        if(Energy == 0)
+        {
+            ReadyToMove = false;
+        }
     }
 
     public bool Move(Vector2 direction)
@@ -45,11 +50,13 @@ public class PlayerMovementScript : MonoBehaviour
 
         {
             direction.x = 0;
+            Energy--;
         }
         else
 
         {
             direction.y = 0;
+            Energy--;
         }
         direction.Normalize();
 
@@ -75,6 +82,16 @@ public class PlayerMovementScript : MonoBehaviour
                 return true;
             }
         }
+
+        foreach (var obj in MovableWithKey)
+        {
+            if (obj.transform.position.x == newpos.x && obj.transform.position.y == newpos.y)
+            {
+                return true;
+            }
+        }
+
+
 
         foreach (var Movable in Movable)
         {
