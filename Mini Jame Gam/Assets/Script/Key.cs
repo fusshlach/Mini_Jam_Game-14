@@ -1,22 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Key : MonoBehaviour
 
 
 {
     public bool Unlock = false;
-    private GameObject[] MovableWithKey;
+    //private GameObject[] MovableWithKey;
     private int arraylenght;
+    [SerializeField]
+     PlayerMovementScript Myplayer;
     void Start()
     {
-        MovableWithKey = GameObject.FindGameObjectsWithTag("MovableWithKey");
-        arraylenght = MovableWithKey.Length;
+        // Myplayer.MovableWithKey = GameObject.FindGameObjectsWithTag("MovableWithKey");
+       // arraylenght = Myplayer.MovableWithKey.Length;
         
-
-
-
 
     }
 
@@ -26,6 +26,7 @@ public class Key : MonoBehaviour
         if (obj.transform.name == "Player")
         {
             Unlock = true;
+            arraylenght = Myplayer.MovableWithKey.Length;
         }
             
         
@@ -37,9 +38,11 @@ public class Key : MonoBehaviour
         {
             for (var i = 0; i < arraylenght; i++)
             {
-                DestroyImmediate(MovableWithKey[i]);
+                Destroy(Myplayer.MovableWithKey[i]);
+
                
             }
+           Array.Clear(Myplayer.MovableWithKey, 0, arraylenght);
             DestroyImmediate(this.gameObject);
         }
     }

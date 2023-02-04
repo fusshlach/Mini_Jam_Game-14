@@ -7,7 +7,7 @@ public class PlayerMovementScript : MonoBehaviour
     public int Energy;
     private GameObject[] Obstacle;
     private GameObject[] Movable;
-    private GameObject[] MovableWithKey;
+    public GameObject[] MovableWithKey;
     private GameObject[] Hurtfull;
 
     private bool ReadyToMove;
@@ -17,6 +17,7 @@ public class PlayerMovementScript : MonoBehaviour
         Movable = GameObject.FindGameObjectsWithTag("Movable");
         MovableWithKey = GameObject.FindGameObjectsWithTag("MovableWithKey");
         Hurtfull = GameObject.FindGameObjectsWithTag("Hurtfull");
+        
     }
 
     // Update is called once per frame
@@ -82,14 +83,17 @@ public class PlayerMovementScript : MonoBehaviour
                 return true;
             }
         }
-
-        foreach (var obj in MovableWithKey)
+        if (MovableWithKey[0] != null)
         {
-            if (obj.transform.position.x == newpos.x && obj.transform.position.y == newpos.y)
+            foreach (var obj in MovableWithKey)
             {
-                return true;
+                if (obj.transform.position.x == newpos.x && obj.transform.position.y == newpos.y)
+                {
+                    return true;
+                }
             }
         }
+        
 
 
 
