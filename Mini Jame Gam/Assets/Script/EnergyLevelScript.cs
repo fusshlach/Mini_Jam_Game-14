@@ -10,11 +10,14 @@ public class EnergyLevelScript : MonoBehaviour
     public int energy = 12;
     [SerializeField]
     public GameObject Text;
+    [SerializeField]
+    FinishScript MyFinish;
     private TMP_InputField TextInput;
     bool upArrowPressed = false;
     bool downArrowPressed = false;
     bool leftArrowPressed = false;
     bool rightArrowPressed = false;
+    private float timer = 0f;
     void Start()
     {
         TextInput = Text.GetComponent<TMP_InputField>();
@@ -28,16 +31,21 @@ public class EnergyLevelScript : MonoBehaviour
     public void Update()
     {
 
-        if (int.Parse(TextInput.text) == 0)
+        if (energy == 0&&MyFinish.Victory ==false)
         {
-            ResetLevel();
+            timer += 1;
+            if (timer >10&&MyFinish.Victory == false)
+            {
+                ResetLevel();
+            }
+            
         }
 
         if (Input.GetKey(KeyCode.UpArrow) && !upArrowPressed)
         {
-            int value = int.Parse(TextInput.text);
-            value--;
-            TextInput.text = value.ToString();
+           
+            energy--;
+            TextInput.text = energy.ToString();
             upArrowPressed = true;
         }
         else if (!Input.GetKey(KeyCode.UpArrow))
@@ -47,9 +55,8 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow) && !downArrowPressed)
         {
-            int value = int.Parse(TextInput.text);
-            value--;
-            TextInput.text = value.ToString();
+            energy--;
+            TextInput.text = energy.ToString();
             downArrowPressed = true;
         }
         else if (!Input.GetKey(KeyCode.DownArrow))
@@ -59,9 +66,8 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow) && !leftArrowPressed)
         {
-            int value = int.Parse(TextInput.text);
-            value--;
-            TextInput.text = value.ToString();
+            energy--;
+            TextInput.text = energy.ToString();
             leftArrowPressed = true;
         }
         else if (!Input.GetKey(KeyCode.LeftArrow))
@@ -71,9 +77,8 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow) && !rightArrowPressed)
         {
-            int value = int.Parse(TextInput.text);
-            value--;
-            TextInput.text = value.ToString();
+            energy--;
+            TextInput.text = energy.ToString();
             rightArrowPressed = true;
         }
         else if (!Input.GetKey(KeyCode.RightArrow))
