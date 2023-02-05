@@ -11,7 +11,11 @@ public class Key : MonoBehaviour
     //private GameObject[] MovableWithKey;
     private int arraylenght;
     [SerializeField]
-     PlayerMovementScript Myplayer;
+    Vague fx;
+    //public GameObject vague;
+    [SerializeField]
+    PlayerMovementScript Myplayer;
+   // private float timer;
     void Start()
     {
         // Myplayer.MovableWithKey = GameObject.FindGameObjectsWithTag("MovableWithKey");
@@ -27,6 +31,7 @@ public class Key : MonoBehaviour
         {
             Unlock = true;
             arraylenght = Myplayer.MovableWithKey.Length;
+
         }
             
         
@@ -36,6 +41,9 @@ public class Key : MonoBehaviour
     {
         if (arraylenght > 0 && Unlock == true)
         {
+            fx.FX = true;
+           // timer-=0.01f;
+           // vague.transform.position = vague.transform.position+new Vector3(0,timer,0);
             for (var i = 0; i < arraylenght; i++)
             {
                 Destroy(Myplayer.MovableWithKey[i]);
