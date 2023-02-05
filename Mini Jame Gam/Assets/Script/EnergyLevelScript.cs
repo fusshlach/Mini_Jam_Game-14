@@ -43,8 +43,11 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow) && !upArrowPressed)
         {
-           
-            energy--;
+           if (MyFinish.Victory == false)
+            {
+                energy--;
+            }
+            
             TextInput.text = energy.ToString();
             upArrowPressed = true;
         }
@@ -55,7 +58,10 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow) && !downArrowPressed)
         {
-            energy--;
+            if (MyFinish.Victory == false)
+            {
+                energy--;
+            }
             TextInput.text = energy.ToString();
             downArrowPressed = true;
         }
@@ -66,7 +72,10 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow) && !leftArrowPressed)
         {
-            energy--;
+            if (MyFinish.Victory == false)
+            {
+                energy--;
+            }
             TextInput.text = energy.ToString();
             leftArrowPressed = true;
         }
@@ -77,7 +86,10 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow) && !rightArrowPressed)
         {
-            energy--;
+            if (MyFinish.Victory == false)
+            {
+                energy--;
+            }
             TextInput.text = energy.ToString();
             rightArrowPressed = true;
         }

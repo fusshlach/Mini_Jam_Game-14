@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovementScript : MonoBehaviour
 {
     public int Energy;
+    [SerializeField]
+    FinishScript Vic;
     private GameObject[] Obstacle;
     private GameObject[] Movable;
     public GameObject[] MovableWithKey;
@@ -29,7 +31,7 @@ public class PlayerMovementScript : MonoBehaviour
 
         if(moveinput.sqrMagnitude > 0.5)
         {
-            if(ReadyToMove)
+            if(ReadyToMove==true &&Vic.Victory ==false)
             {
                 ReadyToMove = false;
                 Move(moveinput);
