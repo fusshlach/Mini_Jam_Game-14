@@ -18,6 +18,7 @@ public class FinishScript : MonoBehaviour
     }
 
     // Update is called once per frame
+    //Hello <3
     void Update()
     {
         if (Victory == true)
