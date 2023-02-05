@@ -8,13 +8,15 @@ public class Push : MonoBehaviour
     private GameObject[] Movable;
     private GameObject[] MovableWithKey;
     private GameObject[] Hurtfull;
-  
+    public AudioSource audioSource;
+
     void Start()
     {
         Obstacle = GameObject.FindGameObjectsWithTag("Obstacle");
         Movable = GameObject.FindGameObjectsWithTag("Movable");
         MovableWithKey = GameObject.FindGameObjectsWithTag("MovableWithKey");
         Hurtfull = GameObject.FindGameObjectsWithTag("Hurtfull");
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,10 +29,12 @@ public class Push : MonoBehaviour
     {
         if(ObjtoBlocked(transform.position,direction))
         {
+            audioSource.Play();
             return false;
         }
         else
         {
+            audioSource.Play();
             transform.Translate(direction);
             return true;
         }
@@ -44,6 +48,7 @@ public class Push : MonoBehaviour
         {
             if (obj.transform.position.x == newpos.x && obj.transform.position.y == newpos.y)
             {
+                audioSource.Play();
                 return true;
             }
         }
@@ -52,6 +57,7 @@ public class Push : MonoBehaviour
         {
             if (Movable.transform.position.x == newpos.x && Movable.transform.position.y == newpos.y)
             {
+                audioSource.Play();
                 return true;
             }
         }

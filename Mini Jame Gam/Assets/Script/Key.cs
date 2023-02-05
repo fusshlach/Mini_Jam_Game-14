@@ -8,6 +8,7 @@ public class Key : MonoBehaviour
 
 {
     public bool Unlock = false;
+    public AudioSource audioSource;
     //private GameObject[] MovableWithKey;
     private int arraylenght;
     [SerializeField]
@@ -18,9 +19,11 @@ public class Key : MonoBehaviour
    // private float timer;
     void Start()
     {
+
+        audioSource = GetComponent<AudioSource>();
         // Myplayer.MovableWithKey = GameObject.FindGameObjectsWithTag("MovableWithKey");
-       // arraylenght = Myplayer.MovableWithKey.Length;
-        
+        // arraylenght = Myplayer.MovableWithKey.Length;
+
 
     }
 
@@ -30,6 +33,7 @@ public class Key : MonoBehaviour
         if (obj.transform.name == "Player")
         {
             Unlock = true;
+            audioSource.Play();
             arraylenght = Myplayer.MovableWithKey.Length;
 
         }
