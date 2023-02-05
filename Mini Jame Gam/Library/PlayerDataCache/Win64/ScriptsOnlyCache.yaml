@@ -6,14 +6,13 @@ ScriptsOnlyBuild:
     - Key
     - PlayerMovementScript
     - Push
+    - Vague
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -64,41 +63,181 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1544}
     - Class: 114
-      Script: {instanceID: 1634}
+      Script: {instanceID: 1574}
     - Class: 114
-      Script: {instanceID: 1746}
+      Script: {instanceID: 1686}
     - Class: 114
-      Script: {instanceID: 1916}
+      Script: {instanceID: 1856}
     - Class: 114
-      Script: {instanceID: 2046}
+      Script: {instanceID: 1986}
     - Class: 114
-      Script: {instanceID: 2056}
+      Script: {instanceID: 1996}
     - Class: 114
-      Script: {instanceID: 2320}
+      Script: {instanceID: 2260}
     - Class: 114
-      Script: {instanceID: 2752}
+      Script: {instanceID: 2692}
     - Class: 114
-      Script: {instanceID: 2922}
+      Script: {instanceID: 2862}
     - Class: 114
-      Script: {instanceID: 2972}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 3158}
+      Script: {instanceID: 3100}
     - Class: 114
-      Script: {instanceID: 3204}
+      Script: {instanceID: 3146}
     - Class: 114
-      Script: {instanceID: 3400}
+      Script: {instanceID: 3342}
     - Class: 114
-      Script: {instanceID: 3410}
+      Script: {instanceID: 3352}
     - Class: 114
-      Script: {instanceID: 4376}
+      Script: {instanceID: 4318}
     - Class: 114
-      Script: {instanceID: 4896}
+      Script: {instanceID: 4838}
     - Class: 114
-      Script: {instanceID: 4924}
+      Script: {instanceID: 4866}
     - Class: 114
-      Script: {instanceID: 5318}
+      Script: {instanceID: 5260}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Level02.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1544}
+    - Class: 114
+      Script: {instanceID: 1574}
+    - Class: 114
+      Script: {instanceID: 1686}
+    - Class: 114
+      Script: {instanceID: 1856}
+    - Class: 114
+      Script: {instanceID: 1986}
+    - Class: 114
+      Script: {instanceID: 1996}
+    - Class: 114
+      Script: {instanceID: 2692}
+    - Class: 114
+      Script: {instanceID: 2862}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 3100}
+    - Class: 114
+      Script: {instanceID: 3146}
+    - Class: 114
+      Script: {instanceID: 3342}
+    - Class: 114
+      Script: {instanceID: 3352}
+    - Class: 114
+      Script: {instanceID: 4318}
+    - Class: 114
+      Script: {instanceID: 4838}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Level03.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1544}
+    - Class: 114
+      Script: {instanceID: 1574}
+    - Class: 114
+      Script: {instanceID: 1686}
+    - Class: 114
+      Script: {instanceID: 1856}
+    - Class: 114
+      Script: {instanceID: 1986}
+    - Class: 114
+      Script: {instanceID: 1996}
+    - Class: 114
+      Script: {instanceID: 2692}
+    - Class: 114
+      Script: {instanceID: 2862}
+    - Class: 114
+      Script: {instanceID: 2894}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 3100}
+    - Class: 114
+      Script: {instanceID: 3146}
+    - Class: 114
+      Script: {instanceID: 3342}
+    - Class: 114
+      Script: {instanceID: 3352}
+    - Class: 114
+      Script: {instanceID: 4318}
+    - Class: 114
+      Script: {instanceID: 4838}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -198,13 +337,13 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 449c630350dd283af33bd2daeea7c409
+      Hash: ebde4c7a913cf3ae5ed6e4b582f26274
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Key
   - hash:
       serializedVersion: 2
-      Hash: bc6231a6d661dfff2b9b4e0593e2fe22
+      Hash: 49259a94a3ab5ec466e90e3173700ac7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovementScript
@@ -292,6 +431,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 59eb3f801abad0c31fbec851affa2170
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Vague
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -667,4 +812,6 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Level01.unity
-  playerPath: C:/Users/lucas/Desktop/Build test/Mini Jame Gam.exe
+  - Assets/Scenes/Level02.unity
+  - Assets/Scenes/Level03.unity
+  playerPath: D:/projectunity/Mini_Jam_Game-14/Mini Jame Gam/builds/Mini Jame Gam.exe
