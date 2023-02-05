@@ -2845,6 +2845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Energy: 30
+  Vic: {fileID: 1017102630}
   MovableWithKey: []
 --- !u!65 &1780039319
 BoxCollider:
