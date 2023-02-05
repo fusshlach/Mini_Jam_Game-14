@@ -11,6 +11,7 @@ public class FinishScript : MonoBehaviour
     public bool Victory = false;
     public Image mgraph;
     private float alph = 0f;
+    public string NextScene = "LevelO1";
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class FinishScript : MonoBehaviour
             alph += 0.001f;
             if (alph > 1)
             {
-                SceneManager.LoadScene("Level01");
+                SceneManager.LoadScene(NextScene);
             }
         }
         

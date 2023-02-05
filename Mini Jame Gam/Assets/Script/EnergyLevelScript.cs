@@ -21,9 +21,9 @@ public class EnergyLevelScript : MonoBehaviour
     void Start()
     {
         TextInput = Text.GetComponent<TMP_InputField>();
-        Debug.Log(TextInput);
+       // Debug.Log(TextInput);
         TextInput.text = energy.ToString();
-        Debug.Log(Text);
+        //Debug.Log(Text);
     }
 
 
