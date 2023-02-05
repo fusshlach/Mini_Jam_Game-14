@@ -11,7 +11,7 @@ public class PlayerMovementScript : MonoBehaviour
     private GameObject[] Movable;
     public GameObject[] MovableWithKey;
     private GameObject[] Hurtfull;
-
+    private SpriteRenderer spriteRenderer;
     private bool ReadyToMove;
     void Start()
     {
@@ -19,7 +19,7 @@ public class PlayerMovementScript : MonoBehaviour
         Movable = GameObject.FindGameObjectsWithTag("Movable");
         MovableWithKey = GameObject.FindGameObjectsWithTag("MovableWithKey");
         Hurtfull = GameObject.FindGameObjectsWithTag("Hurtfull");
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -46,6 +46,8 @@ public class PlayerMovementScript : MonoBehaviour
         {
             ReadyToMove = false;
         }
+
+
     }
 
     public bool Move(Vector2 direction)
@@ -71,8 +73,17 @@ public class PlayerMovementScript : MonoBehaviour
         else
         {
             transform.Translate(direction);
+            if (direction.x < 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (direction.x > 0)
+            {
+                spriteRenderer.flipX = true;
+            }
             return true;
         }
+
     }
 
     public bool Blocked(Vector3 position, Vector2 direction)
