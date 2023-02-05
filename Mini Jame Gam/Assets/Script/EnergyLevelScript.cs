@@ -18,32 +18,46 @@ public class EnergyLevelScript : MonoBehaviour
     bool leftArrowPressed = false;
     bool rightArrowPressed = false;
     private float timer = 0f;
+    public bool Failure = false;
+    public Image mgraph;
+    private float alph = 0f;
     void Start()
     {
         TextInput = Text.GetComponent<TMP_InputField>();
        // Debug.Log(TextInput);
         TextInput.text = energy.ToString();
         //Debug.Log(Text);
+
     }
 
 
 
     public void Update()
     {
+        if (Failure == true)
+        {
+            Color Newcolor = new Color(1f, 1f, 1f, alph);
+            mgraph.color = Newcolor;
+            alph += 0.006f;
+            if (alph > 1.5)
+            {
+                ResetLevel();
+            }
+        }
 
         if (energy == 0&&MyFinish.Victory ==false)
         {
             timer += 1;
             if (timer >10&&MyFinish.Victory == false)
             {
-                ResetLevel();
+                Failure = true;
             }
             
         }
 
         if (Input.GetKey(KeyCode.UpArrow) && !upArrowPressed)
         {
-           if (MyFinish.Victory == false)
+           if (MyFinish.Victory == false&&Failure ==false)
             {
                 energy--;
             }
@@ -58,7 +72,7 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow) && !downArrowPressed)
         {
-            if (MyFinish.Victory == false)
+            if (MyFinish.Victory == false && Failure == false)
             {
                 energy--;
             }
@@ -72,7 +86,7 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow) && !leftArrowPressed)
         {
-            if (MyFinish.Victory == false)
+            if (MyFinish.Victory == false && Failure == false)
             {
                 energy--;
             }
@@ -86,7 +100,7 @@ public class EnergyLevelScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow) && !rightArrowPressed)
         {
-            if (MyFinish.Victory == false)
+            if (MyFinish.Victory == false && Failure == false)
             {
                 energy--;
             }

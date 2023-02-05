@@ -26,7 +26,7 @@ public class FinishScript : MonoBehaviour
             Color Newcolor = new Color(1f, 1f, 1f, alph);
             mgraph.color = Newcolor;
             alph += 0.004f;
-            if (alph > 1)
+            if (alph > 1.2)
             {
                 SceneManager.LoadScene(NextScene);
             }

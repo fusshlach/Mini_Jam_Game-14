@@ -7,6 +7,8 @@ public class PlayerMovementScript : MonoBehaviour
     public int Energy;
     [SerializeField]
     FinishScript Vic;
+    [SerializeField]
+    EnergyLevelScript Fail;
     private GameObject[] Obstacle;
     private GameObject[] Movable;
     public GameObject[] MovableWithKey;
@@ -31,7 +33,7 @@ public class PlayerMovementScript : MonoBehaviour
 
         if(moveinput.sqrMagnitude > 0.5)
         {
-            if(ReadyToMove==true &&Vic.Victory ==false)
+            if(ReadyToMove==true &&Vic.Victory ==false&&Fail.Failure == false)
             {
                 ReadyToMove = false;
                 Move(moveinput);
